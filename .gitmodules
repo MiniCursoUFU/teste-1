@@ -1,0 +1,3 @@
+[submodule "include/teste2"]
+	path = include/teste2
+	url = https://github.com/SciCoBot/teste2.git

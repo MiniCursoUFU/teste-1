@@ -9,14 +9,16 @@ jobs:
     if: github.actor == 'OtaviodaCruz' 
     runs-on: ubuntu-latest
     steps:
-    
+    - name: Checkout
     - uses: actions/checkout@v1
     
-    - uses: hmarr/auto-approve-action@v2.0.0
+    - name: Pull Request Merginator
+    - uses: hmarr/auto-approve-action@v2
       with:
-        github-token: ${{ secrets.ACTION }}
+        github-token: "${{ secrets.ACTION }}"
     
     - name: Pull Request Merginator
       uses: managedkaos/merge-pull-request@v1.2
       env:
         GITHUB_TOKEN: ${{ secrets.ACTION }}
+

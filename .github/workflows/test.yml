@@ -7,7 +7,7 @@ on:
 jobs:
   
   merge:
-    ##if: github.actor == 'automate6500' || github.actor == 'octocat'
+    if: github.actor == 'OtaviodaCruz'
     runs-on: ubuntu-latest
     steps:
     

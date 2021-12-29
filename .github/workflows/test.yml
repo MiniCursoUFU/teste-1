@@ -1,0 +1,27 @@
+name: Auto Merge Owner
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    
+  merge:
+    if: github.actor == 'OtaviodaCruz' 
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+    
+    - uses: actions/checkout@v1
+    
+    - uses: hmarr/auto-approve-action@v2.0.0
+      with:
+        github-token: ${{ secrets.TESTE_ACTION }}
+    
+    - name: Pull Request Merginator
+      uses: managedkaos/merge-pull-request@v1.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.TESTE_ACTION }}

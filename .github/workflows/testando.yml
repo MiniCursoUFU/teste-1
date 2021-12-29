@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: hmarr/auto-approve-action@v2
-      if: github.actor == 'otavio'
+      if: github.actor == 'OtaviodaCruz'
       with:
         github-token: "${{ secrets.TESTE_ACTION }}"

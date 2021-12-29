@@ -1,14 +1,14 @@
 # github.event.pull_request.title
-name: Auto approve
+#name: Auto approve
 
-on:
-  pull_request_target
+#on:
+#  pull_request_target
 
-jobs:
-  auto-approve:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: hmarr/auto-approve-action@v2
-      if: github.actor == 'OtaviodaCruz'
-      with:
-        github-token: "${{ secrets.TESTE_ACTION }}"
+#jobs:
+#  auto-approve:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - uses: hmarr/auto-approve-action@v2
+#      if: github.actor == 'OtaviodaCruz'
+#      with:
+#        github-token: "${{ secrets.TESTE_ACTION }}"

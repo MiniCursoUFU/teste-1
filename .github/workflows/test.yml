@@ -14,7 +14,7 @@ jobs:
     
     - uses: hmarr/auto-approve-action@v2.0.0
       with:
-        GITHUB_TOKEN: ${{ secrets.ACTION }}
+        github-token: ${{ secrets.ACTION }}
     
     - name: Pull Request Merginator
       uses: managedkaos/merge-pull-request@v1.2

@@ -5,13 +5,8 @@ on:
     types: [opened, reopened]
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    
   merge:
     if: github.actor == 'OtaviodaCruz' 
-    needs: [lint]
     runs-on: ubuntu-latest
     steps:
     
